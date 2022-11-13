@@ -1,0 +1,44 @@
+.navbar-nav {
+  font-size: 18px;
+}
+
+.bigCard .card-img {
+  border-radius: 0;
+}
+
+.cardContainer {
+  display: flex !important;
+}
+.minCard {
+  max-width: 350px;
+}
+
+.productRow {
+  /* height: 100vh; */
+  display: flex;
+}
+
+.productCategory {
+  font-weight: 200;
+  font-size: 36px;
+  color: #777;
+}
+
+.productPrice {
+  font-size: 36px;
+}
+
+.navBar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.product {
+  margin-top: 100px;
+}
+
+.skelton {
+  margin-top: 100px;
+}
