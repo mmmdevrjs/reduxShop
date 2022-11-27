@@ -42,3 +42,44 @@
 .skelton {
   margin-top: 100px;
 }
+
+.cart {
+  margin-top: 100px;
+}
+.cartImage {
+  max-width: 100px;
+}
+.cart .row {
+  margin-top: 10px;
+}
+
+.cartContent {
+  display: grid;
+  grid-template-columns: 200px 300px 200px 120px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cartBtns .inc {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.cartBtns button {
+  border: none;
+  background-color: transparent;
+}
+
+.cartBtns i {
+  font-size: 24px;
+}
+.totalPrice {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.outContent {
+  margin-bottom: 30px;
+}

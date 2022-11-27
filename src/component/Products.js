@@ -18,7 +18,6 @@ export default function Products() {
       .then((res) => {
         setData(res.data);
         setFilter(res.data);
-        console.log(filter);
       })
       .catch((e) => {
         console.log(e);
@@ -97,7 +96,7 @@ export default function Products() {
         </div>
         {filter.map((product) => (
           <div className="col-md-3 mb-4" key={product.id}>
-            <div className="card h-100 text-center p-4 " key={product.id}>
+            <div className="card h-100 text-center p-4 ">
               <img
                 src={product.image}
                 className="card-img-top"

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 import { useParams, useNavigate, NavLink } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
 import Skeleton from "react-loading-skeleton";
 import axios from "axios";
+import { addToBascked } from "../redux/actions/action";
 
 export default function Product() {
+  const dispatch = useDispatch();
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
   let history = useNavigate();
@@ -50,6 +52,9 @@ export default function Product() {
   };
 
   const ShowProduct = () => {
+    const handlebasket = (product) => {
+      dispatch(addToBascked(product));
+    };
     return (
       <div className="product">
         <div className="container">
@@ -79,7 +84,12 @@ export default function Product() {
                 </p>
 
                 <div className="buttons">
-                  <button className="btn btn-dark me-2">Add cart</button>
+                  <button
+                    onClick={() => handlebasket(product)}
+                    className="btn btn-dark me-2"
+                  >
+                    Add cart
+                  </button>
                   <NavLink to="/cart" className="btn btn-dark me-2">
                     Go to cart
                   </NavLink>
@@ -91,7 +101,6 @@ export default function Product() {
                   </button>
                 </div>
               </div>
-              <div className="cart"></div>
             </div>
           </div>
         </div>
